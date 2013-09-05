@@ -1,0 +1,162 @@
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+/* Fixes */
+* { margin:0; padding:0; }
+html { height:100%; }
+
+/* Common Elements */
+button {
+	background-color: #F4BB58;
+	color: #692200;
+	border: none;
+	padding: 8px 30px;
+	font-weight: bold;
+}
+
+button[disabled] {
+	background-color: #ccc;
+	color: #666;
+}
+
+input {
+	padding: 8px 20px;
+	border: none;
+}
+
+input[type=radio] {
+	display:none;
+}
+input[type=radio] + label {
+	background-color: #ccc;
+	color: #666;
+	border: 0px;
+	padding: 8px 20px;
+	font-weight: bold;
+	line-height: 2em;
+}
+input[type=radio]:checked + label {
+	background-color: #F4BB58;
+	color: #692200;
+}
+.radio-group {
+	border-radius: 4px;
+	display:inline-block;
+	overflow:hidden;
+	margin: 10px;
+}
+
+textarea {
+	padding:10px;
+	resize:none;
+}
+
+p {
+	padding: 10px 20px;
+}
+
+
+/*
+#692200
+#F4BB58
+*/
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background:#692200;
+    color: #fff;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    width:100%; height:100%;
+    margin:0px; padding:0px;
+}
+
+/* Portrait layout (default) */
+.app {
+	display:none;
+	width:100%;
+	height:100%;
+    text-align:center;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+	#header img {
+		display:none;
+	}
+}
+
+/* LOGIN PAGE */
+#header {
+	margin:0px; padding:0px;
+	
+    text-align:center;
+    background:#F4BB58;
+    color:#692200
+}
+
+#header h1 {
+    padding: 10px;
+    font-weight:bold;
+}
+
+#img-admintop {
+	width:100%;
+	margin:0; padding:0;
+}
+
+#form-login {
+	font-size:1.2em;
+	margin-top: 3em;
+	text-align:center;
+}
+
+#form-login > * {
+	margin-top: 10px;
+}
+
+.input-default {
+	color:#555;
+	font-style:italic;
+}
+
+
+/* STATUS PAGE */
+#text-date {
+	border: 1px solid #fff;
+	margin: 10px 20px;
+	padding: 10px 0px;
+}
+#text-inout {
+	float: left;
+	margin-left: 20px;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+}
+
+#text-inout::before     { content: 'err'; }
+#text-inout.in::before  { content: 'in';  }
+#text-inout.out::before { content: 'out'; }
+
+#text-inout     { background-color:#ff3; color: black; }
+#text-inout.in  { background-color:#0f0; color: white; }
+#text-inout.out { background-color:#f00; color: white; }
+
+#form-status, #form-settings {
+	margin-top: 30px;
+}
+
+#form-status > *, #form-settings > * {
+	margin-bottom: 20px;
+	vertical-align: middle;
+}
+
+#button-settings {
+	margin-top: 20px;
+}
+
+#button-cancel {
+	margin-top: 40px;
+}

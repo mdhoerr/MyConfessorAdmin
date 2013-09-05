@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <title>MyConfessor</title>
+        
+        <!----><script type="text/javascript" src="../cordova.js"></script><!---->
+        <script type="text/javascript" src="../jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <div id="page-login" class="app">
+	        <div id="header">
+	        	<h1>MyConfessor Admin</h1>
+		    	<img src="../img/admin_top.jpg" id="img-admintop" />
+		    </div>
+	        <div id="form-login">
+            	<input type="text" name="username" id="input-username"><br>
+            	<input type="password" name="password" id="input-password"><br>
+            	<button type="submit" name="login" id="button-login">log in</button>
+            </div>
+        </div>
+        <div id="page-status" class="app">
+	        <div id="header">
+	        	<h1>MyConfessor Admin</h1>
+		    </div>
+	        <div id="group-status">
+	        	<p id="text-inout"></p>
+	        	<p id="text-date">Day MM-DD HH:MM AM</p>
+	        	<p id="text-status">Loading...</p>
+            </div>
+	        <div id="form-status">
+        		<div class="radio-group">
+	        		<input type="radio" id="input-in" name='inout' value='in' checked><label for='input-in'>IN</label><!--
+	    	    	comment prevents space between inline elements :(
+		        	--><input type="radio" id="input-out" name='inout' value='out'><label for='input-out'>OUT</label>
+	        	</div><br>
+	        	<textarea id="input-status" name='status' cols="30" rows="4"></textarea><br>
+	        	<button type="submit" id='button-updatestatus'>update</button><br><br><br>
+	        	<button type="submit" id='button-logout'>log out</button>
+            </div>
+        </div>
+    <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
+	
